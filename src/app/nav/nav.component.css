@@ -1,0 +1,107 @@
+@import '~boxicons/css/boxicons.min.css';
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #1e1e1e;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #2f2f2f;
+  color: #dcdcdc;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+    margin-top: 30px;
+    align-content: center;
+  text-align: center;
+  margin-bottom: 40px; /* Aumentar el espacio debajo del perfil */
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  border: 3px solid #c2b280;
+}
+
+.avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sidebar a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s, padding-left 0.3s, transform 0.3s;
+  padding-left: 10px;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.sidebar a:hover {
+  color: #c2b280;
+  padding-left: 20px;
+  transform: translateX(5px);
+}
+
+.social-media {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px; /* Mayor espacio arriba */
+}
+
+.social-media a {
+  color: #dcdcdc;
+  margin: 0 20px; /* Espacio entre los íconos */
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-media a:hover {
+  color: #c2b280;
+  transform: scale(1.2);
+}
+
+.social-media {
+  margin-top: auto; /* Asegura que las redes sociales se mantengan al fondo */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
