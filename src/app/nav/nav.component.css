@@ -3,7 +3,7 @@
 .sidebar {
   width: 250px;
   height: 100vh;
-  background: #2f2f2f;
+  background: #000000;
   color: #dcdcdc;
   padding: 20px;
   position: fixed;
@@ -17,6 +17,7 @@
   transform: translateX(-100%); /* Comienza fuera de la pantalla */
   opacity: 0; /* Comienza invisible */
   transition: transform 0.4s ease, opacity 0.4s ease; /* Transiciones suaves */
+  opacity: 1.5; /* Opcional: transparencia */
 }
 
 .sidebar.active {
@@ -25,9 +26,8 @@
 }
 
 .profile {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
-  margin-bottom: 40px; /* Aumentar el espacio debajo del perfil */
 }
 
 .avatar {
@@ -76,7 +76,7 @@
 }
 
 .sidebar a:hover {
-  color: #c2b280;
+  color: #c9b77f;
   padding-left: 20px;
   transform: translateX(5px);
 }
@@ -100,11 +100,22 @@
 }
 
 .social-media {
-  margin-top: auto; /* Asegura que las redes sociales se mantengan al fondo */
+  text-align: center;
+  padding: 0; /* Elimina el padding innecesario */
+  margin-top: 0; /* Sin margen superior */
+  margin-bottom: 60px; /* Espaciado inferior según diseño */
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
 }
+
+
+.separator {
+  width: 100%; /* Ajusta el ancho del separador */
+  height: 1px; /* Altura de la línea */
+  background-color: #c2b280; /* Color del separador */
+  margin-top: 50px;
+}
+
 
 .menu-button {
   display: none; /* Ocultar por defecto */

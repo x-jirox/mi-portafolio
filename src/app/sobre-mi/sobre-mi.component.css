@@ -1,93 +1,84 @@
-@import '~boxicons/css/boxicons.min.css';
-
+@import '~boxicons/css/boxicons.min.css'; /* Importa el conjunto de iconos Boxicons para su uso en botones y otros elementos */
 
 .home-container {
-    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(68, 64, 64), rgb(108, 102, 102)); /* Gradiente elegante */ /* Gradiente RGB */
-    color: #dcdcdc; /* Color de texto claro */
-    padding: 100px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 70000px; /* Anchura máxima */
-    text-align: center;
-    margin-left: 290px; /* Asegura que el contenido no se solape con el sidebar */
-    padding-bottom: 105px;
+    background: linear-gradient(45deg, #000000, #333232); /* Degradado de fondo que va de negro a gris oscuro */
+    color: #dcdcdc; /* Color de texto claro para buena legibilidad */
+    padding: 100px; /* Espacio interno alrededor del contenido */
+    border-radius: 15px; /* Bordes redondeados para un diseño más suave */
+    max-width: 7000px; /* Anchura máxima del contenedor */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-left: 290px; /* Margen izquierdo para evitar solaparse con el sidebar */
+    padding-bottom: 105px; /* Espacio adicional en la parte inferior */
     background-size: 400% 400%; /* Hace que el gradiente se mueva */
-    animation: gradient-animation 5s ease infinite; /* Animación para mover el gradiente */
+    animation: gradient 5s ease infinite; /* Animación del gradiente de fondo */
 }
 
-/* Animación del gradiente */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-
-/* Animación de entrada */
+/* Animación de entrada para elementos en la página */
 @keyframes fadeInUp {
     to {
-        opacity: 1; /* Hacer visible */
-        transform: translateY(0); /* Volver a la posición original */
+        opacity: 1; /* Hace visible el elemento */
+        transform: translateY(0); /* Vuelve a la posición original */
     }
 }
 
-/* Media query para pantallas más pequeñas */
+/* Media query para adaptar estilos en pantallas más pequeñas */
 @media (max-width: 768px) {
     .home-container {
-        margin-bottom: 15px;
-        margin-left: 0; /* Elimina el margen izquierdo para que ocupe toda la pantalla */
-        padding-top: 60px; /* Ajusta el espacio superior para no solaparse con el navbar */
-        height: calc(100vh - 60px); /* Hace que el home ocupe toda la pantalla, descontando la altura del navbar */
+        padding: 20px; /* Espacio interno alrededor del contenido */
+        margin-bottom: 15px; /* Espacio inferior en pantallas pequeñas */
+        margin-left: 0; /* Elimina margen izquierdo para ocupar toda la pantalla */
+        padding-top: 60px; /* Espacio superior para evitar solapamiento con el navbar */
+        height: calc(100vh - 60px); /* Hace que el contenedor ocupe toda la pantalla menos la altura del navbar */
     }
 }
 
 .profile-section {
-    text-align: center;
-    margin-bottom: 50px;
+    text-align: center; /* Centra el contenido de la sección de perfil */
+    margin-bottom: 50px; /* Espacio inferior para separación */
 }
 
 .profile-pic {
-    width: 150px; /* Tamaño de la imagen de perfil */
-    height: 150px;
-    border-radius: 50%; /* Imagen redonda */
-    border: 5px solid #c2b280; /* Borde dorado */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s; /* Transición en el hover */
+    width: 150px; /* Ancho de la imagen de perfil */
+    height: 150px; /* Alto de la imagen de perfil */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    border: 5px solid #c2b280; /* Borde dorado alrededor de la imagen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para darle profundidad */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
 }
 
 .profile-pic:hover {
-    transform: scale(1.1); /* Aumentar tamaño en hover */
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
 }
 
 .bio {
-    font-size: 16px; /* Aumenta el tamaño de la fuente */
-    line-height: 1.5; /* Espaciado entre líneas */
-    margin: 20px 0;
+    font-size: 16px; /* Aumenta el tamaño de la fuente para la biografía */
+    line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+    margin: 20px 0; /* Espacio superior e inferior */
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-around; /* Espacio entre botones */
-    margin-top: 20px;
+    display: flex; /* Utiliza flexbox para alinear los botones */
+    justify-content: space-around; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior para separación */
 }
 
 .contact-button, .linkedin-button {
     background-color: #c2b280; /* Color de fondo de los botones */
-    color: #1e1e1e; /* Color de texto oscuro */
-    border: none;
-    padding: 10px 20px;
+    color: #1e1e1e; /* Color de texto oscuro para contraste */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno en los botones */
     border-radius: 5px; /* Bordes redondeados en los botones */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Transiciones en color y escala */
-    flex: 1; /* Permite que los botones crezcan */
-    margin: 0 10px; /* Espacio entre botones */
-    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón sobre el botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el color de fondo y el tamaño */
+    flex: 1; /* Permite que los botones crezcan uniformemente */
+    margin: 0 10px; /* Espacio horizontal entre botones */
+    font-size: 16px; /* Aumenta el tamaño de la fuente en los botones */
     font-weight: bold; /* Hace que el texto esté en negrita */
     display: flex; /* Alinea los elementos dentro del botón */
     justify-content: center; /* Centra el contenido horizontalmente */
@@ -96,38 +87,30 @@
 }
 
 .contact-button i, .linkedin-button i {
-    font-size: 20px; /* Ajusta el tamaño del ícono */
+    font-size: 20px; /* Ajusta el tamaño del ícono en los botones */
 }
 
 a {
-    text-decoration: none;
-}
-
-
-.contact-button i, .linkedin-button i {
-    font-size: 20px; /* Ajusta el tamaño del ícono */
-    gap: 150px; /* Espacio entre el ícono y el texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 .contact-button:hover, .linkedin-button:hover {
-    background-color: #d4c8a1; /* Color más claro para hover */
-    transform: scale(1.05); /* Aumentar tamaño en hover */
+    background-color: #d4c8a1; /* Color más claro para el fondo al hacer hover */
+    transform: scale(1.05); /* Aumenta el tamaño del botón al pasar el ratón */
 }
 
 .additional-info {
-    font-size: 16px; /* Tamaño del texto */
-    color: #c2b280; /* Color claro */
-    margin-top: 10px; /* Separación respecto al título */
-    line-height: 1.6; /* Espaciado entre líneas */
-    text-align: center; /* Centrado del texto */
+    font-size: 16px; /* Tamaño del texto adicional */
+    color: #c2b280; /* Color claro para el texto adicional */
+    margin-top: 10px; /* Espacio superior para separación */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    text-align: center; /* Centra el texto adicional */
 }
-
-
 
 /* Media Query para Responsividad */
 @media (max-width: 768px) {
     .button-container {
-        flex-direction: column; /* Cambio a columna en pantallas pequeñas */
+        flex-direction: column; /* Cambia la dirección de los botones a columna en pantallas pequeñas */
     }
     
     .contact-button, .linkedin-button {

@@ -11,9 +11,12 @@
         <li><a routerLink="/education"><i class='bx bx-book'></i> Educación</a></li>
         <li><a routerLink="/experience"><i class='bx bx-briefcase'></i> Experiencia</a></li>
         <li><a routerLink="/skills"><i class='bx bx-cog'></i> Habilidades</a></li>
-        <li><a routerLink="/projects"><i class='bx bx-spreadsheet'></i>Proyectos</a></li>
-        <li><a routerLink="/contact"><i class='bx bxs-envelope'></i>Contacto</a></li>
+        <li><a routerLink="/projects"><i class='bx bx-spreadsheet'></i> Proyectos</a></li>
+        <li><a routerLink="/contact"><i class='bx bxs-envelope'></i> Contacto</a></li>
     </ul>
+    
+    <!-- Separador -->
+    <div class="separator"></div>
     
     <div class="social-media">
         <a href="https://www.facebook.com/lenin.correa.25" target="_blank" class="icon-box">
@@ -27,6 +30,7 @@
         </a>
     </div>
 </div>
+
 
 <button class="menu-button" (click)="toggleMenu()">
     <i class='bx' [ngClass]="{'bx-menu': !isMenuOpen, 'bx-x': isMenuOpen}"></i>
