@@ -1,28 +1,42 @@
-<div class="sidebar">
+<div class="sidebar" [ngClass]="{'active': isMenuOpen}">
     <div class="profile">
-      <div class="avatar">
-        <img src="assets/img/perfil.jpeg" alt="Perfil">
-      </div>
-      <h2>Lenin Correa</h2>
+        <div class="avatar">
+            <img src="assets/img/perfil.jpeg" alt="Perfil">
+        </div>
+        <h2>Lenin Correa</h2>
     </div>
     
     <ul>
-      <li><a routerLink="/inicio"><i class='bx bx-user'></i> Sobre Mí</a></li>
-      <li><a routerLink="/about-me"><i class='bx bx-briefcase'></i> Experiencia</a></li>
-      <li><a routerLink="/educacion"><i class='bx bx-book'></i> Educación</a></li>
-      <li><a routerLink="/habilidades"><i class='bx bx-cog'></i> Habilidades</a></li>
+        <li><a routerLink="/about-me"><i class='bx bx-user'></i> Sobre Mí</a></li>
+        <li><a routerLink="/education"><i class='bx bx-book'></i> Educación</a></li>
+        <li><a routerLink="/experience"><i class='bx bx-briefcase'></i> Experiencia</a></li>
+        <li><a routerLink="/skills"><i class='bx bx-cog'></i> Habilidades</a></li>
+        <li><a routerLink="/projects"><i class='bx bx-spreadsheet'></i>Proyectos</a></li>
+        <li><a routerLink="/contact"><i class='bx bxs-envelope'></i>Contacto</a></li>
     </ul>
     
     <div class="social-media">
-      <a href="https://www.facebook.com/lenin.correa.25" target="_blank" class="icon-box">
-        <i class='bx bxl-facebook'></i>
-      </a>
-      <a href="https://github.com/x-jirox" target="_blank" class="icon-box">
-        <i class='bx bxl-github'></i>
-      </a>
-      <a href="https://www.linkedin.com/in/lenin-correa-b496b5272/" target="_blank" class="icon-box">
-        <i class='bx bxl-linkedin'></i>
-      </a>
-
+        <a href="https://www.facebook.com/lenin.correa.25" target="_blank" class="icon-box">
+            <i class='bx bxl-facebook'></i>
+        </a>
+        <a href="https://github.com/x-jirox" target="_blank" class="icon-box">
+            <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lenin-correa-b496b5272/" target="_blank" class="icon-box">
+            <i class='bx bxl-linkedin-square'></i>
+        </a>
     </div>
-  </div>
+</div>
+
+<button class="menu-button" (click)="toggleMenu()">
+    <i class='bx' [ngClass]="{'bx-menu': !isMenuOpen, 'bx-x': isMenuOpen}"></i>
+</button>
+
+<script>
+    const menuButton = document.querySelector('.menu-button');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+</script>

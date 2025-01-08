@@ -1,0 +1,136 @@
+@import '~boxicons/css/boxicons.min.css';
+
+
+.home-container {
+    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(68, 64, 64), rgb(108, 102, 102)); /* Gradiente elegante */ /* Gradiente RGB */
+    color: #dcdcdc; /* Color de texto claro */
+    padding: 100px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 70000px; /* Anchura máxima */
+    text-align: center;
+    margin-left: 290px; /* Asegura que el contenido no se solape con el sidebar */
+    padding-bottom: 105px;
+    background-size: 400% 400%; /* Hace que el gradiente se mueva */
+    animation: gradient-animation 5s ease infinite; /* Animación para mover el gradiente */
+}
+
+/* Animación del gradiente */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Hacer visible */
+        transform: translateY(0); /* Volver a la posición original */
+    }
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .home-container {
+        margin-bottom: 15px;
+        margin-left: 0; /* Elimina el margen izquierdo para que ocupe toda la pantalla */
+        padding-top: 60px; /* Ajusta el espacio superior para no solaparse con el navbar */
+        height: calc(100vh - 60px); /* Hace que el home ocupe toda la pantalla, descontando la altura del navbar */
+    }
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-pic {
+    width: 150px; /* Tamaño de la imagen de perfil */
+    height: 150px;
+    border-radius: 50%; /* Imagen redonda */
+    border: 5px solid #c2b280; /* Borde dorado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s; /* Transición en el hover */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Aumentar tamaño en hover */
+}
+
+.bio {
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Espacio entre botones */
+    margin-top: 20px;
+}
+
+.contact-button, .linkedin-button {
+    background-color: #c2b280; /* Color de fondo de los botones */
+    color: #1e1e1e; /* Color de texto oscuro */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes redondeados en los botones */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones en color y escala */
+    flex: 1; /* Permite que los botones crezcan */
+    margin: 0 10px; /* Espacio entre botones */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace que el texto esté en negrita */
+    display: flex; /* Alinea los elementos dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.contact-button i, .linkedin-button i {
+    font-size: 20px; /* Ajusta el tamaño del ícono */
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.contact-button i, .linkedin-button i {
+    font-size: 20px; /* Ajusta el tamaño del ícono */
+    gap: 150px; /* Espacio entre el ícono y el texto */
+}
+
+.contact-button:hover, .linkedin-button:hover {
+    background-color: #d4c8a1; /* Color más claro para hover */
+    transform: scale(1.05); /* Aumentar tamaño en hover */
+}
+
+.additional-info {
+    font-size: 16px; /* Tamaño del texto */
+    color: #c2b280; /* Color claro */
+    margin-top: 10px; /* Separación respecto al título */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: center; /* Centrado del texto */
+}
+
+
+
+/* Media Query para Responsividad */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Cambio a columna en pantallas pequeñas */
+    }
+    
+    .contact-button, .linkedin-button {
+        margin: 5px 0; /* Espacio vertical entre botones */
+    }
+}

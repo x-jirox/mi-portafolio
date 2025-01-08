@@ -11,4 +11,6 @@ export class NavComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  
 }
