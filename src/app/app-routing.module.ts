@@ -8,13 +8,13 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/about-me', pathMatch: 'full' },  // Redirige la ruta raíz
-  { path: 'about-me', component: SobreMiComponent },        
-  { path: 'education', component: EducacionComponent }, 
-  { path: 'experience', component: ExperienciaComponent },        
-  { path: 'skills', component: AbilidadesComponent },
-  { path: 'projects', component: ProyectosComponent }, 
-  { path: 'contact', component: ContactoComponent },
+  { path: '', redirectTo: '/about-me', pathMatch: 'full' },
+  { path: 'about-me', component: SobreMiComponent, data: { animation: 'AboutMePage' } },
+  { path: 'education', component: EducacionComponent, data: { animation: 'EducationPage' } },
+  { path: 'experience', component: ExperienciaComponent, data: { animation: 'ExperiencePage' } },
+  { path: 'skills', component: AbilidadesComponent, data: { animation: 'SkillsPage' } },
+  { path: 'projects', component: ProyectosComponent, data: { animation: 'ProjectsPage' } },
+  { path: 'contact', component: ContactoComponent, data: { animation: 'ContactPage' } },
 ];
 
 

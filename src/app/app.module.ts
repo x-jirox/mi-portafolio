@@ -9,6 +9,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { NavComponent } from './nav/nav.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Importa esto
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule // Agrega esto
   ],
   providers: [],
   bootstrap: [AppComponent]
