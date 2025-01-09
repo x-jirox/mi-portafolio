@@ -1,18 +1,16 @@
 @import '~boxicons/css/boxicons.min.css';
 
-
+/* Estilos para el contenedor principal */
 .home-container {
-    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(68, 64, 64), rgb(108, 102, 102)); /* Gradiente elegante */ /* Gradiente RGB */
-    color: #dcdcdc; /* Color de texto claro */
+    background: linear-gradient(45deg, #000000, #333232);
+    color: #dcdcdc;
     padding: 100px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 70000px; /* Anchura máxima */
+    border-radius: 15px;
+    max-width: 7000px;
     text-align: center;
-    margin-left: 290px; /* Asegura que el contenido no se solape con el sidebar */
-    padding-bottom: 105px;
-    background-size: 400% 400%; /* Hace que el gradiente se mueva */
-    animation: gradient-animation 5s ease infinite; /* Animación para mover el gradiente */
+    margin-left: 290px;
+    background-size: 400% 400%;
+    animation: gradient-animation 5s ease infinite;
 }
 
 /* Animación del gradiente */
@@ -26,4 +24,82 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+/* Sección de habilidades */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Categoría de habilidades */
+.skills-category, .skills-category-bland {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Títulos de las categorías */
+.skills-category h3, .skills-category-bland h3 {
+    color: #c9b77f;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos para la cuadrícula de habilidades */
+.skills-grid, .skills-grid-bland {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilos para las cajas de habilidades */
+.skill-box, .skill-box-bland {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    cursor: pointer;
+    width: 125px;
+}
+
+.skill-box {
+    height: 50px;
+}
+
+.skill-box-bland {
+    height: 80px;
+}
+
+/* Efecto hover */
+.skill-box:hover, .skill-box-bland:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Tamaño de los íconos */
+.skill-box i, .skill-box-bland i {
+    font-size: 2rem;
+    margin-right: 5px;
 }

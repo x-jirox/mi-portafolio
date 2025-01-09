@@ -18,6 +18,7 @@
   opacity: 0; /* Comienza invisible */
   transition: transform 0.4s ease, opacity 0.4s ease; /* Transiciones suaves */
   opacity: 1.5; /* Opcional: transparencia */
+  z-index: 2000; /* Prioridad alta en el apilamiento */
 }
 
 .sidebar.active {
@@ -131,6 +132,7 @@
   z-index: 1000;
   transition: background-color 0.3s;
   border-radius: 50%;
+  z-index: 2000; /* Prioridad alta en el apilamiento */
 }
 
 .menu-button:hover {

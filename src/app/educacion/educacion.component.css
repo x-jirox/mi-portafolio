@@ -51,13 +51,13 @@
 }
 
 .education-header {
-    border-bottom: 2px solid #c2b280; /* Línea inferior para separación */
+    border-bottom: 2px solid #c9b77f; /* Línea inferior para separación */
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
 
 .education-header h3 {
-    color: #f0d68c; /* Color de encabezado */
+    color: #c9b77f; /* Color de encabezado */
     margin-bottom: 5px; /* Margen debajo del encabezado */
     font-size: 1.8em; /* Tamaño del encabezado */
 }
@@ -68,25 +68,24 @@
     margin: 5px 0; /* Margen vertical */
 }
 
-.education-description {
-    border-left: 6px solid #c2b280; /* Línea vertical para énfasis */
-    padding-left: 20px; /* Espaciado a la izquierda del texto */
-    margin-top: 10px; /* Margen superior */
-}
-
 .education-section strong {
-    color: #f0d68c; /* Color para texto destacado */
+    color: #c9b77f; /* Color para texto destacado */
 }
 
 .achievements {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente diferente */
-    padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    margin-top: 20px; /* Margen superior */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 20px 0; /* Margen superior e inferior */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición en hover */
+}
+.achievements:hover {
+    transform: scale(1.02); /* Efecto de zoom en hover */
 }
 
 .achievements h4 {
-    color: #c2b280; /* Color del encabezado de logros */
+    color: #c9b77f; /* Color del encabezado de logros */
     margin-bottom: 10px; /* Margen debajo del encabezado */
 }
 

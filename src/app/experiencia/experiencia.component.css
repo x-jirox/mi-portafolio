@@ -13,7 +13,6 @@
     animation: gradient 5s ease infinite; /* Animación del gradiente de fondo */
 }
 
-
 /* Animación del gradiente */
 @keyframes gradient-animation {
     0% {
@@ -32,15 +31,9 @@
         padding: 15px; /* Espacio interno reducido */
         margin: auto; /* Centrado automático */
     }
-
-
 }
 
-.experience-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+
 .experience-item {
     background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
     padding: 30px;
@@ -49,11 +42,15 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
     transition: transform 0.3s; /* Transición en hover */
 }
-.experience-content h3 {
 
-    color: #d0b945; /* Color de texto para títulos */
+.experience-item:hover {
+    transform: scale(1.02); /* Efecto de zoom en hover */
+}
+.experience-content h2, .experience-content h5 {
+    color: #c9b77f; /* Color de texto para títulos */
 }
 .experience-content p {
     margin: 5px 0;
     color: #ffffff; /* Color de texto para párrafos */
 }
+
