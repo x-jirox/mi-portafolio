@@ -2,17 +2,17 @@
 
 
 .home-container {
-    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(68, 64, 64), rgb(108, 102, 102)); /* Gradiente elegante */ /* Gradiente RGB */
-    color: #dcdcdc; /* Color de texto claro */
-    padding: 100px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 70000px; /* Anchura máxima */
-    text-align: center;
-    margin-left: 290px; /* Asegura que el contenido no se solape con el sidebar */
+    background: linear-gradient(45deg, #000000, #333232); /* Degradado de fondo que va de negro a gris oscuro */
+    color: #dcdcdc; /* Color de texto claro para buena legibilidad */
+    padding: 100px; /* Espacio interno alrededor del contenido */
+    border-radius: 15px; /* Bordes redondeados para un diseño más suave */
+    max-width: 7000px; /* Anchura máxima del contenedor */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-left: 290px ; /* Margen izquierdo para evitar solaparse con el sidebar */
     background-size: 400% 400%; /* Hace que el gradiente se mueva */
-    animation: gradient-animation 5s ease infinite; /* Animación para mover el gradiente */
+    animation: gradient 5s ease infinite; /* Animación del gradiente de fondo */
 }
+
 
 /* Animación del gradiente */
 @keyframes gradient-animation {
@@ -29,12 +29,11 @@
 
 @media (max-width: 768px) {
     .home-container {
-        padding-bottom: 630px;
-        margin-bottom: 15px;
-        margin-left: 0; /* Elimina el margen izquierdo para que ocupe toda la pantalla */
-        padding-top: 60px; /* Ajusta el espacio superior para no solaparse con el navbar */
-        height: calc(100vh - 60px); /* Hace que el home ocupe toda la pantalla, descontando la altura del navbar */
+        padding: 15px; /* Espacio interno reducido */
+        margin: auto; /* Centrado automático */
     }
+
+
 }
 
 .experience-section {

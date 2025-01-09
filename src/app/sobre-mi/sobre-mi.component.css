@@ -7,11 +7,11 @@
     border-radius: 15px; /* Bordes redondeados para un diseño más suave */
     max-width: 7000px; /* Anchura máxima del contenedor */
     text-align: center; /* Centra el texto dentro del contenedor */
-    margin-left: 290px; /* Margen izquierdo para evitar solaparse con el sidebar */
-    padding-bottom: 105px; /* Espacio adicional en la parte inferior */
+    margin-left: 290px ; /* Margen izquierdo para evitar solaparse con el sidebar */
     background-size: 400% 400%; /* Hace que el gradiente se mueva */
     animation: gradient 5s ease infinite; /* Animación del gradiente de fondo */
 }
+
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }
@@ -30,11 +30,13 @@
 /* Media query para adaptar estilos en pantallas más pequeñas */
 @media (max-width: 768px) {
     .home-container {
-        padding: 20px; /* Espacio interno alrededor del contenido */
-        margin-bottom: 15px; /* Espacio inferior en pantallas pequeñas */
-        margin-left: 0; /* Elimina margen izquierdo para ocupar toda la pantalla */
-        padding-top: 60px; /* Espacio superior para evitar solapamiento con el navbar */
-        height: calc(100vh - 60px); /* Hace que el contenedor ocupe toda la pantalla menos la altura del navbar */
+        padding: 15px; /* Espacio interno reducido */
+        margin: auto; /* Centrado automático */
+    }
+
+    .profile-pic {
+        width: 100px; /* Ajusta el tamaño en móviles */
+        height: 100px; /* Ajusta el tamaño en móviles */
     }
 }
 

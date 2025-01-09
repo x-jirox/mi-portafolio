@@ -8,11 +8,11 @@
     border-radius: 15px; /* Bordes redondeados para un diseño más suave */
     max-width: 7000px; /* Anchura máxima del contenedor */
     text-align: center; /* Centra el texto dentro del contenedor */
-    margin-left: 290px; /* Margen izquierdo para evitar solaparse con el sidebar */
-    padding-bottom: 105px; /* Espacio adicional en la parte inferior */
+    margin-left: 290px ; /* Margen izquierdo para evitar solaparse con el sidebar */
     background-size: 400% 400%; /* Hace que el gradiente se mueva */
     animation: gradient 5s ease infinite; /* Animación del gradiente de fondo */
 }
+
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }
@@ -30,12 +30,8 @@
 
 @media (max-width: 768px) {
     .home-container {
-        padding: 20px; /* Espacio interno alrededor del contenido */
-        margin-left: 0; /* Elimina el margen izquierdo para que ocupe toda la pantalla */
-        padding-top: 60px; /* Ajusta el espacio superior para no solaparse con el navbar */
-        height: calc(100vh - 60px); /* Hace que el home ocupe toda la pantalla, descontando la altura del navbar */
-        padding-bottom: 200px;
- 
+        padding: 10px; /* Espacio interno reducido */
+        margin: auto; /* Centrado automático */
     }
 }
 /* Media query para pantallas más pequeñas */
