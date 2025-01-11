@@ -1,23 +1,63 @@
 <div class="home-container">
-    <div class="profile-section">
-        <img src="assets/img/perfil.jpeg" alt="perfil" class="profile-pic">
-        <h2>Lenin Correa</h2>
-        <h4>Desarrollador de Software</h4>
-        <p class="additional-info">
-            <strong>Edad:</strong> 21 años <br>
-            <strong>Residencia:</strong> Cuenca - Ecuador
-        </p>
-    </div>
-    
-    <h4 class="bio">
-        Soy desarrollador front-end con experiencia en Angular, HTML, CSS y JavaScript. 
-        También tengo conocimientos en back-end con Java y Python. Me enfoco 
-        en crear aplicaciones web interactivas y eficientes, buscando seguir perfeccionando 
-        mis habilidades en proyectos desafiantes.
-    </h4>
-    
-    <div class="button-container">
-        <a routerLink="/contact" class="contact-button"><i class='bx bxs-envelope'></i>Mi Contacto</a>
-        <a href="https://www.linkedin.com/in/lenin-correa-b496b5272/" target="_blank" class="linkedin-button" ><i class='bx bxl-linkedin-square'></i>Mi LinkedIn</a>
-    </div>
+    <!-- Acerca de mí -->
+    <section class="about-me">
+        <div class="profile-section animate__animated animate__fadeIn">
+            <div class="profile-text">
+                <h1>Lenin Correa</h1>
+                <h3>Desarrollador de Software</h3>
+                <p class="location-info"><i class='bx bxs-user'></i> 21 años | <i class='bx bxs-map'></i> Cuenca,
+                    Ecuador</p>
+            </div>
+            <img src="assets/img/perfil.jpeg" alt="Foto de perfil de Lenin Correa" class="profile-pic">
+        </div>
+
+        <div class="bio-section animate__animated animate__fadeInUp">
+            <p>
+                <i class="bx bxl-angular"></i> Angular |
+                <i class="bx bxl-javascript"></i> JavaScript |
+                <i class="bx bxl-python"></i> Python
+            </p>
+            <p>
+                Enfocado en el desarrollo de aplicaciones web interactivas y eficientes. Siempre aprendiendo y buscando
+                nuevos retos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Educación -->
+    <section class="education">
+        <h2 class="animate__animated animate__fadeIn">Educación</h2>
+        <div class="education-card animate__animated animate__fadeInUp">
+            <div class="education-header">
+                <h3>Instituto Tecnológico del Azuay</h3>
+                <p><strong>Tecnólogo en Desarrollo de Software</strong></p>
+            </div>
+            <div class="education-info">
+                <p>Formación en desarrollo de software y programación en diversos lenguajes. Desarrollé competencias
+                    clave para resolver problemas y crear aplicaciones efectivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="experience">
+        <h2 class="animate__animated animate__fadeIn">Experiencia</h2>
+        <div class="experience-cards">
+            <div class="experience-card animate__animated animate__fadeInUp">
+                <h3><i class="bx bx-briefcase"></i> Libélula</h3>
+                <p>Prácticas en desarrollo de aplicaciones web | Enero 2024 - Mayo 2024</p>
+                <p>Implemente funcionalidades para la gestión de usuarios y la integración de APIs.</p>
+            </div>
+            <div class="experience-card animate__animated animate__fadeInUp">
+                <h3><i class="bx bx-briefcase"></i> TallerTrack</h3>
+                <p>Desarrollo de un sistema para taller mecánico | Octubre 2024 - Noviembre 2024</p>
+                <p>Desarrollé un sistema completo en Spring para la gestión de un taller.</p>
+            </div>
+            <div class="experience-card animate__animated animate__fadeInUp">
+                <h3><i class="bx bx-briefcase"></i> Confort Art</h3>
+                <p>Sistema de gestión para mueblería | Noviembre 2024 - Diciembre 2024</p>
+                <p>Implementé un sistema administrativo para productos y categorías en un entorno web.</p>
+            </div>
+        </div>
+    </section>
 </div>

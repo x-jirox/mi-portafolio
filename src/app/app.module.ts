@@ -7,8 +7,6 @@ import { AbilidadesComponent } from './abilidades/abilidades.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NavComponent } from './nav/nav.component';
-import { EducacionComponent } from './educacion/educacion.component';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Importa esto
 
 @NgModule({
@@ -18,9 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     AbilidadesComponent,
     ProyectosComponent,
     ContactoComponent,
-    NavComponent,
-    EducacionComponent,
-    ExperienciaComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,

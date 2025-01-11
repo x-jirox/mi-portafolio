@@ -1,29 +1,125 @@
 @import '~boxicons/css/boxicons.min.css';
 
-
-.home-container {
-    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(68, 64, 64), rgb(108, 102, 102)); /* Gradiente elegante */ /* Gradiente RGB */
-    color: #dcdcdc; /* Color de texto claro */
-    padding: 100px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 70000px; /* Anchura máxima */
+/* Estilos del Contenedor de Contactos */
+.contacto-container {
+    background-color: #0b0f1a;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-left: 290px; /* Asegura que el contenido no se solape con el sidebar */
-    padding-bottom: 105px;
-    background-size: 400% 400%; /* Hace que el gradiente se mueva */
-    animation: gradient-animation 5s ease infinite; /* Animación para mover el gradiente */
+    height: 100vh;
+    /* Ocupa el 100% de la altura de la pantalla */
+    width: 100%;
+    /* Ocupa el 100% del ancho de la pantalla */
+    box-sizing: border-box;
+    /* Asegura que el padding no sobrepase el tamaño */
+    justify-content: center;
+    /* Centra el contenido verticalmente */
 }
 
-/* Animación del gradiente */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
+/* Título de Contacto */
+#contact-title {
+    color: #f2a900;
+    margin-bottom: 2rem;
+}
+
+/* Contenedor de las tarjetas de contacto */
+.contact-cards-container {
+    padding-top: 90px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Tarjetas de Contacto */
+
+.contact-card {
+    background-color: #ffffff0f;
+    border-radius: 100px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 162, 0, 0.5);
+
+}
+
+.contact-card .bxl-whatsapp:hover {
+    color: #25D366;
+    /* Color original de WhatsApp */
+}
+
+.contact-card .bxl-linkedin:hover {
+    color: #0077B5;
+    /* Color original de LinkedIn */
+}
+
+.contact-card .bxl-github:hover {
+    color: #181717;
+    /* Color original de GitHub */
+}
+
+.contact-card .bxl-facebook:hover {
+    color: #3b5998;
+    /* Color original de Facebook */
+}
+
+.contact-card .bxl-instagram:hover {
+    color: #E4405F;
+    /* Color original de Instagram */
+}
+
+.contact-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.contact-card h4 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #ffffff;
+}
+
+/* Estilos adicionales para los iconos */
+.bx,
+.bxl {
+    transition: color 0.3s ease;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .contacto-container {
+        padding: 1rem;
+        /* Menos padding en pantallas pequeñas */
+        height: auto;
+        /* Deja que el contenido se ajuste al tamaño */
     }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
+
+    .contact-cards-container {
+        flex-direction: column;
+        /* Las tarjetas se apilan verticalmente */
+        gap: 1rem;
+        /* Reduce el espacio entre las tarjetas */
     }
 }

@@ -1,121 +1,184 @@
-@import '~boxicons/css/boxicons.min.css'; /* Importa el conjunto de iconos Boxicons para su uso en botones y otros elementos */
+@import '~boxicons/css/boxicons.min.css';
 
+/* Estilos generales */
 .home-container {
-    background: linear-gradient(45deg, #000000, #333232); /* Degradado de fondo que va de negro a gris oscuro */
-    color: #dcdcdc; /* Color de texto claro para buena legibilidad */
-    padding: 100px; /* Espacio interno alrededor del contenido */
-    border-radius: 15px; /* Bordes redondeados para un diseño más suave */
-    max-width: 7000px; /* Anchura máxima del contenedor */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    margin-left: 290px ; /* Margen izquierdo para evitar solaparse con el sidebar */
-    background-size: 400% 400%; /* Hace que el gradiente se mueva */
-    animation: gradient 5s ease infinite; /* Animación del gradiente de fondo */
+    background-color: #0b0f1a;
+    color: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Animación de entrada para elementos en la página */
-@keyframes fadeInUp {
-    to {
-        opacity: 1; /* Hace visible el elemento */
-        transform: translateY(0); /* Vuelve a la posición original */
-    }
-}
-
-/* Media query para adaptar estilos en pantallas más pequeñas */
-@media (max-width: 768px) {
-    .home-container {
-        padding: 15px; /* Espacio interno reducido */
-        margin: auto; /* Centrado automático */
-    }
-
-    .profile-pic {
-        width: 100px; /* Ajusta el tamaño en móviles */
-        height: 100px; /* Ajusta el tamaño en móviles */
-    }
-}
-
+/* Sección del perfil */
 .profile-section {
-    text-align: center; /* Centra el contenido de la sección de perfil */
-    margin-bottom: 50px; /* Espacio inferior para separación */
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .profile-pic {
-    width: 150px; /* Ancho de la imagen de perfil */
-    height: 150px; /* Alto de la imagen de perfil */
-    border-radius: 50%; /* Hace que la imagen sea redonda */
-    border: 5px solid #c2b280; /* Borde dorado alrededor de la imagen */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para darle profundidad */
-    transition: transform 0.3s; /* Transición suave para el efecto hover */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 162, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    margin-left: 2rem;
+    /* Espacio entre imagen y texto */
 }
 
 .profile-pic:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
+    transform: scale(1.1);
 }
 
-.bio {
-    font-size: 16px; /* Aumenta el tamaño de la fuente para la biografía */
-    line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
-    margin: 20px 0; /* Espacio superior e inferior */
+.profile-text {
+    text-align: left;
+    margin-right: 2rem;
+    /* Espacio entre texto y la imagen */
 }
 
-.button-container {
-    display: flex; /* Utiliza flexbox para alinear los botones */
-    justify-content: space-around; /* Espacio entre los botones */
-    margin-top: 20px; /* Espacio superior para separación */
+h1 {
+    color: #f2a900;
+    margin-top: 1rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.contact-button, .linkedin-button {
-    background-color: #c2b280; /* Color de fondo de los botones */
-    color: #1e1e1e; /* Color de texto oscuro para contraste */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espacio interno en los botones */
-    border-radius: 5px; /* Bordes redondeados en los botones */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón sobre el botón */
-    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el color de fondo y el tamaño */
-    flex: 1; /* Permite que los botones crezcan uniformemente */
-    margin: 0 10px; /* Espacio horizontal entre botones */
-    font-size: 16px; /* Aumenta el tamaño de la fuente en los botones */
-    font-weight: bold; /* Hace que el texto esté en negrita */
-    display: flex; /* Alinea los elementos dentro del botón */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    gap: 10px; /* Espacio entre el ícono y el texto */
+h3 {
+    color: #fff;
+    margin-top: 0.5rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.contact-button i, .linkedin-button i {
-    font-size: 20px; /* Ajusta el tamaño del ícono en los botones */
+.location-info {
+    color: #ccc;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
-a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
+.bio-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #bbb;
+    animation: fadeInUp 2s ease-in-out;
 }
 
-.contact-button:hover, .linkedin-button:hover {
-    background-color: #d4c8a1; /* Color más claro para el fondo al hacer hover */
-    transform: scale(1.05); /* Aumenta el tamaño del botón al pasar el ratón */
+.bio-section i {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+    /* Aumentar el tamaño de los íconos */
+    transition: color 0.3s ease;
 }
 
-.additional-info {
-    font-size: 16px; /* Tamaño del texto adicional */
-    color: #c2b280; /* Color claro para el texto adicional */
-    margin-top: 10px; /* Espacio superior para separación */
-    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
-    text-align: center; /* Centra el texto adicional */
+/* Animaciones para tarjetas */
+.education,
+.experience {
+    margin-top: 3rem;
+    width: 100%;
+    text-align: center;
 }
 
-/* Media Query para Responsividad */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column; /* Cambia la dirección de los botones a columna en pantallas pequeñas */
+.education-card,
+.experience-card {
+    background-color: #ffffff0f;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.education-card:hover,
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 162, 0, 0.5);
+}
+
+h2 {
+    color: #f2a900;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #f2a900;
+}
+
+.experience-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.education-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.education-info p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Iconos interactivos */
+.bx {
+    font-size: 1.5rem;
+    color: #f2a900;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Colores originales para los íconos */
+.bio-section .bx.bxl-angular {
+    color: #E23237;
+    /* Rojo de Angular */
+}
+
+.bio-section .bx.bxl-python {
+    color: #306998;
+    /* Azul de Python */
+}
+
+.bio-section .bx.bxl-javascript {
+    color: #F7DF1E;
+    /* Amarillo de JavaScript */
+}
+
+.bx:hover {
+    color: #fff;
+    transform: rotate(15deg);
+}
+
+.bx-bxl-angular,
+.bx-bxl-javascript,
+.bx-bxl-python {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
-    .contact-button, .linkedin-button {
-        margin: 5px 0; /* Espacio vertical entre botones */
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

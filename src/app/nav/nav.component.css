@@ -1,43 +1,38 @@
 @import '~boxicons/css/boxicons.min.css';
 
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  background: #000000;
-  color: #dcdcdc;
-  padding: 20px;
+.header {
+  z-index: 1000;
+  /* Coloca el header por encima del contenido */
   position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateX(-100%); /* Comienza fuera de la pantalla */
-  opacity: 0; /* Comienza invisible */
-  transition: transform 0.4s ease, opacity 0.4s ease; /* Transiciones suaves */
-  opacity: 1.5; /* Opcional: transparencia */
-  z-index: 2000; /* Prioridad alta en el apilamiento */
+  width: 100%;
+  /* Asegura que ocupe todo el ancho disponible */
 }
 
-.sidebar.active {
-  transform: translateX(0); /* Muestra el sidebar */
-  opacity: 1; /* Hace visible el sidebar */
+.main {
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente */
+  padding: 0.5px 15px;
+  background: #000000be;
+  margin: 0 auto;
+  /* Centra el header */
+  backdrop-filter: blur(5px);
+  /* Efecto de desenfoque */
 }
 
 .profile {
-  margin-top: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  /* Space between profile and menu */
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 10px;
-  border: 3px solid #c2b280;
+  margin: 10px;
 }
 
 .avatar img {
@@ -45,119 +40,170 @@
   height: auto;
 }
 
-.sidebar h2 {
-  font-size: 24px;
-  margin: 0;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  width: 100%;
-}
-
-.sidebar li {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.sidebar a {
-  color: #dcdcdc;
-  text-decoration: none;
-  font-size: 18px;
+.menu {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: color 0.3s, padding-left 0.3s, transform 0.3s;
-  padding-left: 10px;
+  justify-content: space-between;
+  margin: 0 auto;
+  /* Esto centra el header */
 }
 
-.sidebar a i {
-  margin-right: 10px;
-}
-
-.sidebar a:hover {
-  color: #c9b77f;
-  padding-left: 20px;
-  transform: translateX(5px);
-}
-
-.social-media {
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px; /* Mayor espacio arriba */
-}
-
-.social-media a {
-  color: #dcdcdc;
-  margin: 0 20px; /* Espacio entre los íconos */
-  font-size: 24px;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.social-media a:hover {
-  color: #c2b280;
-  transform: scale(1.2);
-}
-
-.social-media {
-  text-align: center;
-  padding: 0; /* Elimina el padding innecesario */
-  margin-top: 0; /* Sin margen superior */
-  margin-bottom: 60px; /* Espaciado inferior según diseño */
+.cv {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: end;
 }
 
-
-.separator {
-  width: 100%; /* Ajusta el ancho del separador */
-  height: 1px; /* Altura de la línea */
-  background-color: #c2b280; /* Color del separador */
-  margin-top: 50px;
+.menu ul,
+.cv ul {
+  list-style: none;
+  display: flex;
+  /* Make the list horizontal */
 }
 
+.menu li,
+.cv li {
+  margin: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  /* Color del texto */
+  padding: 10px 25px;
+  /* Padding en los enlaces */
+  border-radius: 50px;
+  /* Bordes redondeados */
+  background-color: #63636347;
+  /* Fondo del enlace */
+  display: flex;
+  /* Usar flexbox para alinear el ícono y el texto */
+  align-items: center;
+  /* Alinear íconos y texto verticalmente */
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cv a {
+  text-decoration: none;
+  color: #ffffff;
+  /* Color del texto */
+  padding: 10px 25px;
+  /* Padding en los enlaces */
+  border-radius: 50px;
+  /* Bordes redondeados */
+  background-color: #926909ac;
+  /* Fondo del enlace */
+  display: flex;
+  /* Usar flexbox para alinear el ícono y el texto */
+  align-items: center;
+  /* Alinear íconos y texto verticalmente */
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.menu a i,
+.cv a i {
+  margin-right: 10px;
+  /* Espacio entre el ícono y el texto */
+}
+
+.cv a:hover {
+  background-color: #f2a900ac;
+  /* Fondo del enlace */
+}
+
+.menu a:hover {
+  background-color: #f2a900ac;
+  /* Darker background on hover */
+}
+
+.profile h2 {
+  color: #eaeaea;
+}
 
 .menu-button {
-  display: none; /* Ocultar por defecto */
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #c2b280;
-  color: #fff;
+  display: none;
+  /* Ocultar por defecto */
+  background-color: #6363639f;
+  /* Fondo del enlace */
+  color: #ffffffe0;
   border: none;
-  padding: 8px 10px;
-  font-size: 25px;
+  height: 50px;
+  width: 60px;
+  font-size: 50px;
   cursor: pointer;
-  z-index: 1000;
-  transition: background-color 0.3s;
   border-radius: 50%;
-  z-index: 2000; /* Prioridad alta en el apilamiento */
 }
 
-.menu-button:hover {
-  background-color: #b59c60;
+.dropdown-menu {
+  position: fixed;
+  display: block;
+  flex-direction: column;
+  /* Para que los elementos del menú estén en columna */
+  top: 70px;
+  /* Ajusta según la altura del header */
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        display: flex; /* Mostrar el sidebar en pantallas pequeñas */
-    }
-    .sidebar.active {
-        display: flex; /* Mostrar el sidebar si está activo */
-    }
-    .menu-button {
-        display: block; /* Mostrar el botón en pantallas pequeñas */
-    }
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width: 769px) {
-    .sidebar {
-        display: flex; /* Mostrar el sidebar en pantallas grandes */
-        opacity: 1; /* Asegura que sea visible */
-        transform: translateX(0); /* Asegura que esté en su posición original */
-    }
-    .menu-button {
-        display: none; /* Ocultar el botón en pantallas grandes */
-    }
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  /* Padding en los enlaces */
+  display: flex;
+  /* Usar flexbox para alinear el ícono y el texto */
+  align-items: center;
+  /* Alinear íconos y texto verticalmente */
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  /* Para que el área clickeable sea toda la celda */
+  border-radius: 50px;
+  background-color: #636363de;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2a900ac;
+  color: azure;
+}
+
+@media (max-width: 970px) {
+
+  .menu,
+  .cv {
+    display: none;
+    /* Ocultar menú en pantallas pequeñas */
+  }
+
+  .menu-button {
+    display: flex;
+    /* Mostrar el botón en pantallas pequeñas */
+  }
+
+  .profile {
+    justify-content: flex-start;
+    /* Alinea el perfil a la izquierda */
+    width: 100%;
+    /* Asegura que ocupe el ancho completo */
+  }
+}
+
+@media (min-width: 970px) {
+  .menu-button {
+    display: none;
+    /* Ocultar el botón en pantallas grandes */
+  }
 }

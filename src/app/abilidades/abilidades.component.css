@@ -1,105 +1,143 @@
 @import '~boxicons/css/boxicons.min.css';
-
-/* Estilos para el contenedor principal */
+/* Contenedor general */
 .home-container {
-    background: linear-gradient(45deg, #000000, #333232);
-    color: #dcdcdc;
-    padding: 100px;
-    border-radius: 15px;
-    max-width: 7000px;
-    text-align: center;
-    margin-left: 290px;
-    background-size: 400% 400%;
-    animation: gradient-animation 5s ease infinite;
-}
-
-/* Animación del gradiente */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .home-container {
-        padding: 20px;
-        margin: 10px;
-    }
+    background-color: #0b0f1a;
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 /* Sección de habilidades */
 .skills-section {
+    padding-top: 20px;
+    margin-top: 2rem;
+}
+
+.skills-category {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.skills-category-title {
+    color: #f2a900;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-row {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-card {
+    background-color: #ffffff0f;
+    border-radius: 100px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Categoría de habilidades */
-.skills-category, .skills-category-bland {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 800px;
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 162, 0, 0.5);
 }
 
-/* Títulos de las categorías */
-.skills-category h3, .skills-category-bland h3 {
-    color: #c9b77f;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    text-align: center;
+/* Íconos: Blanco por defecto, color original al pasar el ratón */
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-/* Estilos para la cuadrícula de habilidades */
-.skills-grid, .skills-grid-bland {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+.skill-card:hover i.bxl-angular {
+    color: #DD0031; /* Angular: Rojo */
 }
 
-/* Estilos para las cajas de habilidades */
-.skill-box, .skill-box-bland {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    cursor: pointer;
-    width: 125px;
+.skill-card:hover i.bxl-html5 {
+    color: #E44D26; /* HTML: Naranja */
 }
 
-.skill-box {
-    height: 50px;
+.skill-card:hover i.bxl-css3 {
+    color: #1572B6; /* CSS: Azul */
 }
 
-.skill-box-bland {
-    height: 80px;
+.skill-card:hover i.bxl-javascript {
+    color: #F7DF1E; /* JavaScript: Amarillo */
 }
 
-/* Efecto hover */
-.skill-box:hover, .skill-box-bland:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+.skill-card:hover i.bxl-python {
+    color: #3776AB; /* Python: Azul */
 }
 
-/* Tamaño de los íconos */
-.skill-box i, .skill-box-bland i {
-    font-size: 2rem;
-    margin-right: 5px;
+.skill-card:hover i.bxl-java {
+    color: #007396; /* Java: Azul oscuro */
+}
+
+.skill-card:hover i.bxl-react {
+    color: #61DAFB; /* React: Azul claro */
+}
+
+.skill-card:hover i.bxl-nodejs {
+    color: #8CC84B; /* Node.js: Verde */
+}
+
+.skill-card:hover i.bxs-database {
+    color: #00758F; /* Base de datos: Azul */
+}
+
+.skill-card:hover i.bxl-git {
+    color: #F05032; /* Git: Naranja */
+}
+
+.skill-card:hover i.bxl-github {
+    color: #181717; /* GitHub: Negro */
+}
+
+.skill-card:hover i.bxl-docker {
+    color: #2496ED; /* Docker: Azul */
+}
+
+.skill-card:hover i.bxs-code-block {
+    color: #007ACC; /* Visual Studio Code: Azul */
+}
+
+.skill-card:hover i.bxs-brackets {
+    color: #8C2231; /* IntelliJ IDEA: Rojo oscuro */
+}
+
+.skill-card:hover i.bxs-wrench {
+    color: #c58020; /* Postman: Gris */
+}
+
+/* Habilidades blandas */
+.skill-card:hover i.bxs-group {
+    color: #6C757D; /* Trabajo en equipo: Gris oscuro */
+}
+
+.skill-card:hover i.bxs-message-dots {
+    color: #6C757D; /* Comunicación efectiva: Gris oscuro */
+}
+
+.skill-card:hover i.bxs-bulb {
+    color: #FFD700; /* Resolución de problemas: Amarillo */
+}
+
+.skill-card:hover i.bxs-adjust {
+    color: #6C757D; /* Adaptabilidad: Gris oscuro */
+}
+
+.skill-card h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
 }

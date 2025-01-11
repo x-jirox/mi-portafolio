@@ -6,8 +6,6 @@ export const slideInAnimation = trigger('routeAnimations', [
       // Define la dirección del movimiento basándote en el orden de las rutas
       const routeOrder = [
         'AboutMePage',
-        'EducationPage',
-        'ExperiencePage',
         'SkillsPage',
         'ProjectsPage',
         'ContactPage',
@@ -40,8 +38,6 @@ export const slideInAnimation = trigger('routeAnimations', [
     (fromState, toState) => {
       const routeOrder = [
         'AboutMePage',
-        'EducationPage',
-        'ExperiencePage',
         'SkillsPage',
         'ProjectsPage',
         'ContactPage',

@@ -1,29 +1,3 @@
 @import '~boxicons/css/boxicons.min.css';
 
 
-.home-container {
-    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(68, 64, 64), rgb(108, 102, 102)); /* Gradiente elegante */ /* Gradiente RGB */
-    color: #dcdcdc; /* Color de texto claro */
-    padding: 100px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 70000px; /* Anchura máxima */
-    text-align: center;
-    margin-left: 290px; /* Asegura que el contenido no se solape con el sidebar */
-    padding-bottom: 105px;
-    background-size: 400% 400%; /* Hace que el gradiente se mueva */
-    animation: gradient-animation 5s ease infinite; /* Animación para mover el gradiente */
-}
-
-/* Animación del gradiente */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
