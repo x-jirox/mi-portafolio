@@ -1,3 +1,86 @@
 @import '~boxicons/css/boxicons.min.css';
 
 
+/* Estilos para la sección de proyectos */
+.proyectos {
+    padding: 136px 0;
+    background-color: #080c13;
+    color: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #6b500f;
+  }
+  
+  .proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .proyecto-card {
+    background-color: #ffffff11;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .proyecto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .proyecto-info {
+    padding: 20px;
+  }
+  
+  .proyecto-title {
+    font-size: 24px;
+    color: #736726;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .proyecto-description {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .proyecto-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .proyecto-link {
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #121212;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid rgb(0, 0, 0);
+    
+  }
+  
+  .proyecto-link:hover {
+    background-color: #7a651f;
+    color: #ffffff;
+  }
+  
+  i{
+    margin-right: 10px;
+
+  }

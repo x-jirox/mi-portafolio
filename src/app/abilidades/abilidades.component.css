@@ -1,7 +1,7 @@
 @import '~boxicons/css/boxicons.min.css';
 /* Contenedor general */
 .home-container {
-    background-color: #0b0f1a;
+    background-color: #080c13;
     padding: 2rem;
     border-radius: 8px;
 }
@@ -19,7 +19,7 @@
 }
 
 .skills-category-title {
-    color: #f2a900;
+    color: #6b500f;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -105,14 +105,6 @@
 
 .skill-card:hover i.bxl-docker {
     color: #2496ED; /* Docker: Azul */
-}
-
-.skill-card:hover i.bxs-code-block {
-    color: #007ACC; /* Visual Studio Code: Azul */
-}
-
-.skill-card:hover i.bxs-brackets {
-    color: #8C2231; /* IntelliJ IDEA: Rojo oscuro */
 }
 
 .skill-card:hover i.bxs-wrench {
