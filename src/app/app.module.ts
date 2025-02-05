@@ -7,7 +7,8 @@ import { AbilidadesComponent } from './abilidades/abilidades.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NavComponent } from './nav/nav.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Importa esto
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadPageComponent } from './load-page/load-page.component'; // Importa esto
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     AbilidadesComponent,
     ProyectosComponent,
     ContactoComponent,
-    NavComponent
+    NavComponent,
+    LoadPageComponent
   ],
   imports: [
     BrowserModule,
